@@ -41,8 +41,8 @@ def writeopml(opmllines)
   end
 end
 
-namere = /RSS\/(.*\/)*(.*?)\.rssmbox\/Info.plist/
-path = File.expand_path("~/Library/Mail/RSS/")
+namere = /RSS\/(.*\/)*(.*?)\.mbox\/Info.plist/
+path = File.expand_path("~/Library/Mail/V2/RSS/")
 opmllines = Hash.new
 Find.find(path) do |p1| 
   if m=p1.match(namere)
